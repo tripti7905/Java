@@ -1,7 +1,7 @@
 # Java
 Welcome to my GitHub repository!
 
-This repository is a comprehensive collection of Java programs, ranging from beginner to advanced levels. Whether you're just starting your journey in Java or looking to refine and expand your skills, you'll find valuable resources and examples here. I've crafted each program with clear, commented code to aid your understanding.
+This repository is a comprehensive collection of Java programs, ranging from beginner to advanced levels. Whether you're just starting your journey in Java or looking to refine and expand your skills, you'll find valuable resources and examples here. Each program with clear, commented code to aid your understanding.
 
 ### Table of Contents
 
