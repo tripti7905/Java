@@ -3,7 +3,7 @@
 // Importing generic Classes/Files
 import java.io.*;
  
-class GFG {
+class Largest_three_Number_WithTernary{
    
     // Function to find the biggest of three numbers
     static int biggestOfThree(int x, int y, int z)
