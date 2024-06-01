@@ -1,0 +1,22 @@
+import java.util.Scanner;
+ 
+public class NeonNumber {
+    public static void main(String[] args) {
+        int number=9;
+        int square = number * number;
+        if (isNeonNumber(square, number)) {
+            System.out.println(number + " is a neon number");
+        } else {
+            System.out.println(number + " is not a neon number");
+        }
+    }
+ 
+    private static boolean isNeonNumber(int square, int number) {
+        if (square == 0) {
+            return number == 0;
+        } else {
+            int digit = square % 10;
+            return isNeonNumber(square / 10, number - digit);
+        }
+    }
+}
