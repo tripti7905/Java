@@ -1,4 +1,4 @@
-// Java program to compute
+// Java program to compute 
 // simple interest for given principal
 // amount, time and rate of interest.
 import java.io.*;
