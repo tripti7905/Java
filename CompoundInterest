@@ -1,0 +1,27 @@
+public class CompoundInterest {
+
+    private double principal;
+    private double rate;
+    private int time;
+    private int n;
+
+    public CompoundInterest(double principal, double rate, int time, int n) {
+        this.principal = principal;
+        this.rate = rate;
+        this.time = time;
+        this.n = n;
+    }
+
+    public double calculate() {
+        // Formula for compound interest
+        // A = P (1 + r/n)^(nt)
+        double amount = principal * Math.pow((1 + rate / n), n * time);
+        return amount - principal;
+    }
+
+    public static void main(String[] args) {
+        CompoundInterest ci = new CompoundInterest(1000, 0.05, 10, 4);
+        double interest = ci.calculate();
+        System.out.println("Compound Interest is: " + interest);
+    }
+}
