@@ -1,0 +1,20 @@
+import java.util.stream.IntStream;
+
+public class CompoundInterest {
+
+    public static double calculateCompoundInterest(double principal, double rate, int time, int n) {
+        return IntStream.rangeClosed(1, time * n)
+                        .mapToDouble(i -> rate / n)
+                        .reduce(principal, (p, r) -> p * (1 + r)) - principal;
+    }
+
+    public static void main(String[] args) {
+        double principal = 1000;
+        double rate = 0.05;
+        int time = 10; // in years
+        int n = 4; // number of times interest applied per time period
+
+        double interest = calculateCompoundInterest(principal, rate, time, n);
+        System.out.println("Compound Interest is: " + interest);
+    }
+}
