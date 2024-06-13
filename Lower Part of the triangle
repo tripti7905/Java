@@ -1,0 +1,55 @@
+// Java Program to Print Lower Part of Mirror Upper Star
+// Triangle Pattern
+
+// Importing input output classes
+import java.io.*;
+
+// Main Class
+class Lower_Part_ofthe_triangle     {
+
+	// Method 1
+	// To print lower part of the pattern
+	private static void displayLowerPart(int size)
+	{
+
+		// Declaring variables for rows and columns
+		// respectively
+		int m, n;
+
+		// Outer loop fo Rows
+		for (m = 1; m <= size; m++) {
+
+			// Inner loop 1 to print triangle 3
+			for (n = 1; n < m; n++) {
+
+				// Printing whitespace
+				System.out.print(" ");
+			}
+
+			// Inner loop 2 to print triangle 4
+			for (n = m; n <= size; n++) {
+
+				// Printing star and whitespace
+				System.out.print("*"
+								+ " ");
+			}
+
+			// By now done with one row so new line
+			System.out.println();
+		}
+	}
+
+	// Method 2
+	// Main driver method
+	public static void main(String[] args)
+	{
+		// Declaring and initializing variable to
+		// size of the triangle
+		// This is number of rows
+		int size = 7;
+
+		// Calling the above Method1
+		// to display lower part of the triangle
+		displayLowerPart(size);
+	}
+}
