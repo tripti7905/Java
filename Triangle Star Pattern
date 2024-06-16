@@ -1,0 +1,32 @@
+// added by Manish Sharma
+
+import java.io.*;
+
+class Triangle 
+{ 
+	public static void printRow(int n)
+	{
+		if(n == 0) // base case
+		{
+			return;
+		}
+
+		System.out.print("* ");
+		printRow(n - 1); // next * in the same row
+	}
+	public static void nextRow(int n)
+	{
+		if(n == 0)
+		{
+			return;
+		}
+		printRow(n); // prints the whole row recursively.
+		System.out.print("\n"); // for new line after printing a row...
+		nextRow(n - 1);	 // changed to new row
+	}
+
+	public static void main (String[] args) 
+	{
+		GFG.nextRow(5); // no need to create an object of GFG class as nextRow method is static.
+	}
+}
