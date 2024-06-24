@@ -1,0 +1,35 @@
+ /*package whatever //do not write package name here */
+
+import java.io.*;
+
+class Recursion 
+{ 
+	// similar to inner for loop
+	public static void printRow(int n)
+	{
+		if(n == 0) 
+		{
+			return;
+		}
+		System.out.print("* ");
+		printRow(n - 1); // recursive call for printing desired numbers of stars in a single row
+	}
+
+	// similar to outer for loop
+	public static void changeRow(int n) // for number of rows.....it prints stars for each row
+	{ 
+		if(n == 0)
+		{
+			return; 
+		}
+		
+		printRow(n); // prints stars in a single row..
+		System.out.print("\n"); // for changing the row....new line
+		changeRow(n - 1); // recursive call for next row..
+	}
+
+	public static void main (String[] args) 
+	{
+		Recursion.changeRow(5); // no need of object as changeRow is static method...
+	}
+}
