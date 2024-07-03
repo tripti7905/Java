@@ -1,0 +1,37 @@
+// Java program to convert octal
+// to decimal number using custom code
+import java.lang.Math;
+
+// Driver Class
+public class Main {
+	// main function
+	public static void main(String[] args)
+	{
+		int a = 167;
+
+		// Initialize result variable to 0.
+		int result = 0;
+
+		// Take a copy of input
+		int copy_a = a;
+
+		for (int i = 0; copy_a > 0; i++) {
+
+			// Take the last digit
+			int temp = copy_a % 10;
+
+			// Appropriate power on 8 suitable to
+			// its position.
+			double p = Math.pow(8, i);
+
+			// Multiply the digits to the into the Input
+			// and
+			// then add it to result
+			result += (temp * p);
+			copy_a = copy_a / 10;
+		}
+
+		System.out.print("Decimal of Octal Number (" + a
+						+ ") : " + result);
+	}
+}
